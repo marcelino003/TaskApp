@@ -46,7 +46,7 @@ const HeaderTasks: React.FC = () => {
   };
 
   return (
-    <header className="items-center grid grid-cols-[1fr_auto_1fr] gap-4 md:gap-0 md:flex ">
+    <header className="items-center grid grid-cols-[1fr_auto_1fr] gap-4 md:gap-0 md:flex bg-slate-50 shadow-lg shadow-slate-300 dark:shadow-slate-800 px-4 py-3 rounded-xl">
       <button
         className="mr-6 block xl:hidden"
         onClick={openMenuHeaderHandler}
