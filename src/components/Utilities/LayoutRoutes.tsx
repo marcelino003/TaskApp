@@ -3,7 +3,6 @@ import { Task } from "../../interfaces";
 import { useAppDispatch } from "../../store/hooks";
 import { modalActions } from "../../store/Modal.store";
 import useSortTasks from "../hooks/useSortTasks";
-import ButtonsSort from "../TasksSection/ButtonsSort";
 import TaskItem from "../TasksSection/TaskItem/TaskItem";
 
 type Props = {
@@ -31,12 +30,12 @@ const LayoutRoutes: React.FC<Props> = ({ title, tasks }) => {
       <h1 className="font-medium my-5 text-center sm:text-left sm:my-8 md:text-2xl text-lg dark:text-slate-200">
         {tasksTitle}
       </h1>
-      <ButtonsSort
+      {/* <ButtonsSort
         isListInView1={isListInView1}
         setIsListInView1={setIsListInView1}
         sortedBy={sortedBy}
         setSortedBy={setSortedBy}
-      />
+      /> */}
       <ul
         className={`tasksList mt-4 grid gap-2 sm:gap-4 xl:gap-6 ${
           isListInView1
