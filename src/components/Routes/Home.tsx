@@ -6,7 +6,7 @@ import LayoutRoutes from "../Utilities/LayoutRoutes";
 const Home: React.FC = () => {
   const tasks = useAppSelector((state) => state.tasks.tasks);
 
-  useDescriptionTitle("Organize suas Tarefas", "Todas ás Tarefas");
+  useDescriptionTitle("Organize suas Tarefas", "Todas as Tarefas");
   return <LayoutRoutes title="Todas as Tarefas" tasks={tasks}></LayoutRoutes>;
 };
 
