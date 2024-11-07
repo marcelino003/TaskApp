@@ -1,11 +1,15 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { useAppDispatch } from "../../store/hooks";
 
 const BtnKanban: React.FC<{ className?: string }> = ({ className }) => {
   const dispatch = useAppDispatch();
 
+  const navigate = useNavigate();
+
   const onOpenModal = () => {
-    alert("Em desenvolvimento");
+    // Redireciona para o caminho '/kanban'
+    navigate("/kanban");
   };
   return (
     <>

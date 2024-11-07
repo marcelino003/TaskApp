@@ -12,7 +12,7 @@ const DoneTasks: React.FC<{ done: boolean; title: string }> = ({
 
   const { tasks: tasksFiltered } = useCompletedTasks({ tasks, done });
 
-  useDescriptionTitle("All tasks done", title);
+  useDescriptionTitle("Todas as tarefas estão completas", title);
 
   return <LayoutRoutes title={title} tasks={tasksFiltered}></LayoutRoutes>;
 };

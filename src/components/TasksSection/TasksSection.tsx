@@ -1,5 +1,6 @@
 import React from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
+import KanbanList from "../kanban/kanbanList";
 import Directory from "../Routes/Directory";
 import DoneTasks from "../Routes/DoneTasks";
 import Home from "../Routes/Home";
@@ -17,6 +18,8 @@ const TasksSection: React.FC = () => {
         <Route path="/" element={<Home />} />
         <Route path="/today" element={<TodaysTasks />} />
         <Route path="/important" element={<ImportantTasks />} />
+        <Route path="/kanban" element={<KanbanList />} />
+
         <Route
           path="/completed"
           element={<DoneTasks done={true} title="Tarefas Concluídas" />}
