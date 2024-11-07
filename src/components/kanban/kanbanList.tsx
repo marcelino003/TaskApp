@@ -23,7 +23,7 @@ const KanbanList: React.FC = () => {
     },
     {
       id: 4,
-      title: "Tarefa 3",
+      title: "Tarefa 4",
       status: "Concluídas",
       dueDate: "2024-11-10",
     },
@@ -35,6 +35,17 @@ const KanbanList: React.FC = () => {
         task.id === taskId ? { ...task, status: newStatus } : task
       )
     );
+  };
+
+  const getNextStatus = (currentStatus: string) => {
+    switch (currentStatus) {
+      case "Nova Tarefa":
+        return "Em Andamento";
+      case "Em Andamento":
+        return "Concluídas";
+      default:
+        return currentStatus;
+    }
   };
 
   return (
@@ -65,6 +76,14 @@ const KanbanList: React.FC = () => {
                     <FaRegClock className="mr-2" />
                     <span>Criado em: {new Date().toLocaleDateString()}</span>
                   </div>
+                  <button
+                    className="mt-4 px-4 py-2 bg-blue-500 text-white rounded-lg"
+                    onClick={() =>
+                      moveTask(task.id, getNextStatus(task.status))
+                    }
+                  >
+                    Mover
+                  </button>
                 </div>
               ))}
           </div>
@@ -91,6 +110,14 @@ const KanbanList: React.FC = () => {
                     <FaRegClock className="mr-2" />
                     <span>Criado em: {new Date().toLocaleDateString()}</span>
                   </div>
+                  <button
+                    className="mt-4 px-4 py-2 bg-blue-500 text-white rounded-lg"
+                    onClick={() =>
+                      moveTask(task.id, getNextStatus(task.status))
+                    }
+                  >
+                    Mover
+                  </button>
                 </div>
               ))}
           </div>
