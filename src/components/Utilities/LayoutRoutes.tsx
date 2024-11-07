@@ -23,7 +23,7 @@ const LayoutRoutes: React.FC<Props> = ({ title, tasks }) => {
   };
 
   const tasksTitle = `${title} (${tasks.length} ${
-    tasks.length === 1 ? "task" : "tasks"
+    tasks.length === 1 ? "Tarefa" : "Tarefas"
   })`;
 
   return (

@@ -1,8 +1,8 @@
 import React from "react";
+import { ReactComponent as Check } from "../../../assets/check.svg";
+import { ReactComponent as SvgX } from "../../../assets/x.svg";
 import { useAppDispatch } from "../../../store/hooks";
 import { tasksActions } from "../../../store/Tasks.store";
-import { ReactComponent as SvgX } from "../../../assets/x.svg";
-import { ReactComponent as Check } from "../../../assets/check.svg";
 
 const BtnToggleCompleted: React.FC<{
   taskCompleted: boolean;
@@ -26,7 +26,7 @@ const BtnToggleCompleted: React.FC<{
       onClick={() => toggleTaskCompleted(taskId)}
     >
       <span className="block py-1 px-3 absolute invisible sm:static sm:visible">
-        {taskCompleted ? "completed" : "uncompleted"}
+        {taskCompleted ? "Finalizada" : "Pendente"}
       </span>
       <span className=" sm:hidden w-6 h-6 grid place-items-center">
         {taskCompleted ? (

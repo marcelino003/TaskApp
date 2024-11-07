@@ -1,7 +1,7 @@
 import React from "react";
 import { useAppDispatch, useAppSelector } from "../../store/hooks";
 import { menusActions } from "../../store/Menu.store";
-import BtnAddTask from "../Utilities/BtnAddTask";
+import BtnKanban from "../Utilities/BtnKanban";
 import LayoutMenus from "../Utilities/LayoutMenus";
 import Directories from "./Directories/Directories";
 import NavLinks from "./NavLinks";
@@ -26,7 +26,7 @@ const Menu: React.FC = () => {
         <h1 className="font-bold uppercase text-center mt-8 text-lg tracking-wide hidden xl:block">
           TaskApp
         </h1>
-        <BtnAddTask className="my-8 mx-4" />
+        <BtnKanban className="my-8 mx-4" />
         <NavLinks classActive={classLinkActive} />
         <Directories classActive={classLinkActive} />
       </header>

@@ -1,13 +1,16 @@
 import React from "react";
-import { Task } from "../../../interfaces";
 import { ReactComponent as Calendar } from "../../../assets/date.svg";
-import useDate from "../../hooks/useDate";
+import { Task } from "../../../interfaces";
 
 const InfosTask: React.FC<{ task: Task; isListInView1: boolean }> = ({
   task,
   isListInView1,
 }) => {
-  const dateFormated = useDate(task.date);
+  // Formatar a data diretamente no componente
+  const [year, month, day] = task.date.split("-").map(Number);
+  const dateFormatted = `${day.toString().padStart(2, "0")}/${month
+    .toString()
+    .padStart(2, "0")}/${year}`;
 
   return (
     <div className={`flex flex-col flex-1 ${isListInView1 ? "mr-6" : ""}`}>
@@ -29,7 +32,7 @@ const InfosTask: React.FC<{ task: Task; isListInView1: boolean }> = ({
         {task.description}
       </p>
       <time className="mt-auto flex w-full">
-        <Calendar className="mr-2 w-4 sm:w-5" /> {dateFormated}
+        <Calendar className="mr-2 w-4 sm:w-5" /> {dateFormatted}
       </time>
     </div>
   );

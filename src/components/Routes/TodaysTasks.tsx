@@ -9,7 +9,7 @@ const TodaysTasks: React.FC = () => {
   useDescriptionTitle("Tarefas de hoje", "Tarefas de hoje");
 
   return (
-    <LayoutRoutes title="Tarefas de Hoje" tasks={todaysTasks}></LayoutRoutes>
+    <LayoutRoutes title="Tarefas para Hoje" tasks={todaysTasks}></LayoutRoutes>
   );
 };
 

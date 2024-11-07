@@ -1,11 +1,11 @@
 import React from "react";
-import BtnAddTask from "../Utilities/BtnAddTask";
-import { ReactComponent as MenuIcon } from "../../assets/menu.svg";
 import avatar1 from "../../assets/avatar-1.jpg";
-import SearchField from "./SearchField";
+import { ReactComponent as MenuIcon } from "../../assets/menu.svg";
 import { useAppDispatch } from "../../store/hooks";
 import { menusActions } from "../../store/Menu.store";
+import BtnAddTask from "../Utilities/BtnAddTask";
 import Notification from "./Notification";
+import SearchField from "./SearchField";
 
 const HeaderTasks: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -15,28 +15,28 @@ const HeaderTasks: React.FC = () => {
   const month: number = date.getMonth();
   const day: number = date.getDate();
 
-  const monthName: string[] = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
+  const monthNames: string[] = [
+    "Janeiro",
+    "Fevereiro",
+    "Março",
+    "Abril",
+    "Maio",
+    "Junho",
+    "Julho",
+    "Agosto",
+    "Setembro",
+    "Outubro",
+    "Novembro",
+    "Dezembro",
   ];
 
-  const todayDate = `${year}, ${monthName[month].slice(0, 3)} ${day
-    .toString()
-    .padStart(2, "0")}`;
+  const todayDate = `${day.toString().padStart(2, "0")} de ${
+    monthNames[month - 1]
+  } de ${year}`;
 
-  const dateTimeFormat = `${year}-${month.toString().padStart(2, "0")}-${day
+  const dateTimeFormat = `${day.toString().padStart(2, "0")}/${month
     .toString()
-    .padStart(2, "0")}}`;
+    .padStart(2, "0")}/${year}`;
 
   const openMenuHeaderHandler = () => {
     dispatch(menusActions.openMenuHeader());
@@ -57,7 +57,7 @@ const HeaderTasks: React.FC = () => {
       <SearchField />
       <div className="text-center">
         <span className="text-slate-600 dark:text-slate-200 uppercase font-bold text-sm block xl:hidden">
-          To-do listss
+          TaskApp
         </span>
         <time dateTime={dateTimeFormat}>{todayDate}</time>
       </div>

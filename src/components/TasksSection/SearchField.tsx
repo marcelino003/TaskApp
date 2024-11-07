@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { createSearchParams, Link, useNavigate } from "react-router-dom";
 import { ReactComponent as Search } from "../../assets/search.svg";
 import { Task } from "../../interfaces";
@@ -61,7 +61,7 @@ const SearchField: React.FC = () => {
         <input
           type="search"
           id="search"
-          placeholder="Search task"
+          placeholder="Buscar Tarefa.."
           ref={searchResultsRef}
           onKeyUp={({ currentTarget }) => {
             setSearchInputValue(currentTarget.value);

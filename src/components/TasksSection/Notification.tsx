@@ -41,7 +41,7 @@ const Notification: React.FC = () => {
           {uncompletedTasks.length > 0 ? (
             <div>
               <span className="dark:text-slate-200 font-medium">
-                Você tem {uncompletedTasks.length} tarefas incompletas hoje:
+                {uncompletedTasks.length} Tarefa(s) pendente:
               </span>
               <ul>
                 {tasksToShow.map((task) => (

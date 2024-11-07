@@ -4,7 +4,6 @@ import { useAppDispatch, useAppSelector } from "../../store/hooks";
 import { menusActions } from "../../store/Menu.store";
 import LayoutMenus from "../Utilities/LayoutMenus";
 import DarkMode from "./DarkMode";
-import DeleteTasks from "./DeleteTasks";
 import TasksDone from "./TasksDone";
 
 const AccountData: React.FC = () => {
@@ -31,13 +30,6 @@ const AccountData: React.FC = () => {
         <DarkMode />
 
         <TasksDone />
-        {/* <DeleteTasks />
-        <a
-          href="https://github.com/aridsm"
-          className="mt-4 bg-rose-100 p-2 rounded-md text-rose-600 text-center transition hover:bg-rose-200 dark:bg-slate-700/[.3] dark:text-slate-200"
-        >
-          Projected by Ariane Morelato
-        </a> */}
       </section>
     </LayoutMenus>
   );
