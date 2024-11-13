@@ -30,10 +30,7 @@ const Directory: React.FC = () => {
   }, [directories, navigate, params.dir, tasks]);
 
   return (
-    <LayoutRoutes
-      title={`${params.dir}'s tasks`}
-      tasks={tasksInCurrentDirectory}
-    />
+    <LayoutRoutes title={`${params.dir}`} tasks={tasksInCurrentDirectory} />
   );
 };
 
