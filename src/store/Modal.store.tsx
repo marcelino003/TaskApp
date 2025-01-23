@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   modalCreateTaskOpen: false,
+  modalCalendarOpen: false,
 };
 
 const modalSlice = createSlice({
@@ -13,6 +14,12 @@ const modalSlice = createSlice({
     },
     closeModalCreateTask(state) {
       state.modalCreateTaskOpen = false;
+    },
+    openModalCalendar(state) {
+      state.modalCalendarOpen = true;
+    },
+    closeModalCalendar(state) {
+      state.modalCalendarOpen = false;
     },
   },
 });

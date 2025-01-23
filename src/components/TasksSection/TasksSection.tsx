@@ -1,6 +1,5 @@
 import React from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
-import KanbanList from "../kanban/kanbanList";
 import Directory from "../Routes/Directory";
 import DoneTasks from "../Routes/DoneTasks";
 import Home from "../Routes/Home";
@@ -9,6 +8,7 @@ import SearchResults from "../Routes/SearchResults";
 import TaskOnly from "../Routes/TaskOnly";
 import TodaysTasks from "../Routes/TodaysTasks";
 import HeaderTasks from "./HeaderTasks";
+import CalendarList from "../Calendar/calendar";
 
 const TasksSection: React.FC = () => {
   return (
@@ -18,7 +18,7 @@ const TasksSection: React.FC = () => {
         <Route path="/" element={<Home />} />
         <Route path="/today" element={<TodaysTasks />} />
         <Route path="/important" element={<ImportantTasks />} />
-        <Route path="/kanban" element={<KanbanList />} />
+        <Route path="/calendar" element={<CalendarList />} />
 
         <Route
           path="/completed"
