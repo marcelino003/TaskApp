@@ -1,5 +1,4 @@
 import React from "react";
-import AccountData from "./components/AccountSection/AccountData";
 import Menu from "./components/Menu/Menu";
 import TasksSection from "./components/TasksSection/TasksSection";
 import ModalCreateTask from "./components/Utilities/ModalTask";
@@ -22,7 +21,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="bg-slate-200 min-h-screen text-slate-600 dark:bg-slate-900 dark:text-slate-400 xl:text-base sm:text-sm text-xs">
+    <div className="bg-slate-200 min-h-screen text-slate-600 dark:bg-slate-900 dark:text-slate-400 xl:text-base sm:text-sm text-xs flex">
       {modal.modalCreateTaskOpen && (
         <ModalCreateTask
           onClose={closeModalCreateTask}
@@ -31,9 +30,8 @@ const App: React.FC = () => {
         />
       )}
       <Menu />
-      <TasksSection />
+      <TasksSection className="flex-grow w-full md:ml-[16.5vw]" />
       {/* <Footer /> */}
-      <AccountData />
     </div>
   );
 };

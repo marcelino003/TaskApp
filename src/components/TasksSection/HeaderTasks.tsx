@@ -1,9 +1,8 @@
 import React from "react";
-import avatar1 from "../../assets/avatar-1.jpg";
+import avatar1 from "../../assets/avatar-1..png";
 import { ReactComponent as MenuIcon } from "../../assets/menu.svg";
 import { useAppDispatch } from "../../store/hooks";
 import { menusActions } from "../../store/Menu.store";
-import BtnAddTask from "../Utilities/BtnAddTask";
 import Notification from "./Notification";
 import SearchField from "./SearchField";
 
@@ -61,17 +60,20 @@ const HeaderTasks: React.FC = () => {
         </span>
         <time dateTime={dateTimeFormat}>{todayDate}</time>
       </div>
-      <div className="flex flex-1">
-        <Notification />
-        <BtnAddTask className="sm:static fixed bottom-3 right-3 z-10 sm:z-0 min-w-max shadow-lg shadow-slate-400  dark:shadow-slate-900 sm:shadow-transparent" />
+      <div className="flex flex-1 items-center justify-end">
+        {/* Ícone de notificação e avatar ao lado */}
+        <div className="flex items-center">
+          <Notification />
+          {/* <Calendar /> */}
 
-        <button onClick={openMenuAccountHandler} className="block xl:hidden">
-          <img
-            src={avatar1}
-            alt="cat"
-            className="w-10 h-10 rounded-full ml-4"
-          />
-        </button>
+          <button onClick={openMenuAccountHandler} className="ml-4">
+            <img
+              src={avatar1}
+              alt="avatar"
+              className="w-10 h-10 rounded-full"
+            />
+          </button>
+        </div>
       </div>
     </header>
   );

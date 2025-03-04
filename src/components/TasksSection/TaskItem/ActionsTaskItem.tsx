@@ -1,8 +1,8 @@
 import React from "react";
 import { Task } from "../../../interfaces";
+import BtnDeleteTask from "./BtnDeleteTask";
 import BtnEditTask from "./BtnEditTask";
 import BtnMarkAsImportant from "./BtnMarkAsImportant";
-import BtnDeleteTask from "./BtnDeleteTask";
 import BtnToggleCompleted from "./BtnToggleCompleted";
 
 const ActionsTaskItem: React.FC<{ task: Task; isListInView1: boolean }> = ({

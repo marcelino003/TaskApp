@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
+import { FaBell } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { ReactComponent as IconBell } from "../../assets/bell.svg";
 import useCompletedTasks from "../hooks/useCompletedTasks";
 import useTodayTasks from "../hooks/useTodayTasks";
 import useVisibility from "../hooks/useVisibility";
@@ -32,9 +32,9 @@ const Notification: React.FC = () => {
         ref={refBtnNotification}
         onClick={showNotifications}
         className={`relative ${tasksToShow.length ? classHasNotification : ""}`}
-        title="see notifications"
+        title="ver notificações"
       >
-        <IconBell className="fill-violet-600 w-5 h-5 md:w-6 md:h-6 dark:fill-violet-800" />
+        <FaBell className="fill-gray-600 w-5 h-5 md:w-6 md:h-6 dark:fill-violet-800" />
       </button>
       {notificationIsVisible && (
         <div className="absolute bg-slate-100 dark:bg-slate-800 top-full rounded-md right-0 p-3 w-52 border border-slate-300 dark:border-slate-700">

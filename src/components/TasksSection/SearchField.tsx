@@ -82,11 +82,11 @@ const SearchField: React.FC = () => {
                   onClick={navigateToSearchResults}
                   className="bg-rose-100 w-full p-2 rounded-md text-rose-600 dark:bg-slate-700/[.3] dark:text-slate-200"
                 >
-                  All results for "{searchInputValue}"
+                  Todos os resultados para "{searchInputValue}"
                 </button>
               </>
             ) : (
-              <span>No tasks found</span>
+              <span>Sem resultados</span>
             )}
           </div>
         )}
