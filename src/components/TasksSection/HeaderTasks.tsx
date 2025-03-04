@@ -3,6 +3,8 @@ import avatar1 from "../../assets/avatar-1..png";
 import { ReactComponent as MenuIcon } from "../../assets/menu.svg";
 import { useAppDispatch } from "../../store/hooks";
 import { menusActions } from "../../store/Menu.store";
+import DarkMode from "../AccountSection/DarkMode";
+import Calendar from "./Calendar";
 import Notification from "./Notification";
 import SearchField from "./SearchField";
 
@@ -45,7 +47,7 @@ const HeaderTasks: React.FC = () => {
   };
 
   return (
-    <header className="items-center grid grid-cols-[1fr_auto_1fr] gap-4 md:gap-0 md:flex bg-slate-50 shadow-lg shadow-slate-300 dark:shadow-slate-800 px-4 py-3 rounded-xl">
+    <header className="items-center grid grid-cols-[1fr_auto_1fr] gap-4 md:gap-0 md:flex bg-slate-50 dark:bg-slate-800 border border-white px-4 py-3 rounded-xl">
       <button
         className="mr-6 block xl:hidden"
         onClick={openMenuHeaderHandler}
@@ -63,8 +65,9 @@ const HeaderTasks: React.FC = () => {
       <div className="flex flex-1 items-center justify-end">
         {/* Ícone de notificação e avatar ao lado */}
         <div className="flex items-center">
+          <DarkMode />
           <Notification />
-          {/* <Calendar /> */}
+          <Calendar />
 
           <button onClick={openMenuAccountHandler} className="ml-4">
             <img

@@ -3,9 +3,9 @@ import React, { useEffect, useState } from "react";
 const DarkMode: React.FC = () => {
   const [isCurrentDarkmode, setIsCurrentDarkmode] = useState<boolean>(() => {
     const darkModeWasSet = localStorage.getItem("darkmode");
-    if (darkModeWasSet) return true;
-    else return false;
+    return darkModeWasSet ? true : false;
   });
+
   const toggleDarkMode = () => {
     setIsCurrentDarkmode((prevState) => !prevState);
   };
@@ -29,10 +29,10 @@ const DarkMode: React.FC = () => {
 
   return (
     <button
-      className="mt-8 text-left flex items-center justify-between"
+      className="mt-1 mr-4 text-left flex items-center justify-between"
       onClick={toggleDarkMode}
     >
-      <span className="dark:text-slate-200">Tema Escuro</span>
+      {/* <span className="dark:text-slate-200 mr-2">Tema</span> */}
       <div className="w-10 h-5 bg-slate-200 rounded-full px-0.5 dark:bg-slate-700/[.3] relative flex items-center dark:justify-end">
         <div className="w-4 h-4 rounded-full bg-violet-600 absolute"></div>
       </div>
